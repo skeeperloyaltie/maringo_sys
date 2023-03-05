@@ -94,9 +94,13 @@ inline void maintain_member_details(vector<Member> &members) {
     cin >> member.school_or_college;
     cout << "Enter games of interest (in order of priority): ";
     string game;
+    cin >> game;
     while (cin >> game) {
+	        if (game == "done") { 
+    		    break; 
+    		}
         member.games_of_interest.push_back(game);
-    }
+   }
     cout << "Enter weight: ";
     cin >> member.weight;
     cout << "Enter height: ";
@@ -116,6 +120,9 @@ inline void maintain_sport_details(vector<Sport> &sports) {
     cout << "Enter team members: ";
     string member;
     while (cin >> member) {
+	        if (member == "done") { 
+        break; 
+    }
         sport.team_members.push_back(member);
     }
     cout << "Enter facilitation fee: ";
